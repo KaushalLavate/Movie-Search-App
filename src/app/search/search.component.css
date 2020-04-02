@@ -1,0 +1,19 @@
+
+mat-form-field {
+    width: 100% ;
+    margin-right: 0.5em;
+}
+mat-icon {
+    margin-right: 0.6em;
+}
+span{
+    color: black;
+}
+input[type="text"]{
+    width: 65vw;
+    height: 30px;
+    margin: 5px;
+    border: 3px solid #F5C52E;
+    border-radius: 6px;
+}
+  
