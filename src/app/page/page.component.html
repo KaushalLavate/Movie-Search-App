@@ -1,12 +1,11 @@
-<p>page works!!!</p>
+<!--<p>page works!!!</p>--->
 
 <div class="row">
-    <mat-card *ngFor="let movie of movies$ | async"
-        (click)="_router.navigate(['/movie-details',movie?.imdbID])">
+    <mat-card *ngFor="let movie of movies">
 
         <mat-card-header>
             <mat-card-title>
-                {{movie?.Title?.substring(0, 100)}}
+                {{ movie?.Title.substring(0, 100) }}
             </mat-card-title>
             <mat-card-subtitle> {{movie?.Type}} {{movie?.Year}}</mat-card-subtitle>
         </mat-card-header>

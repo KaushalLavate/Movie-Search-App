@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import  * as data from '../database/movie-list.json';
 
 @Component({
   selector: 'app-page',
@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
+  movies: any = (data as any).movies;
+
   constructor() { }
 
-  ngOnInit(){
-    
+ ngOnInit(){
   }
 }

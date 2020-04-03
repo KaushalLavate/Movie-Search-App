@@ -6,7 +6,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
-import { MatCardModule, MatCard } from "@angular/material/card";
+import { MatCardModule, } from "@angular/material/card";
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageComponent } from './page/page.component';
 import { SearchComponent } from './search/search.component';
 import { MovieService } from "./services/movie.service";
+import { baseURL } from "./models/movie";
  
 
 
@@ -36,7 +37,10 @@ import { MovieService } from "./services/movie.service";
     MatInputModule,
     MatCardModule
   ],
-  providers: [MovieService],
+  providers: [
+    MovieService,
+    { provide: 'BaseURL', useValue:baseURL }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

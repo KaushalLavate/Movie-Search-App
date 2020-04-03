@@ -1,8 +1,10 @@
-export class Search {
-    Title: string;
-    Year: number;
-    imdbID: string;
-    Type: string;
+export const baseURL = 'http://localhost:3000/';
+
+export interface Search {
+    Title: string,
+    Year: number,
+    imdbID: string,
+    Type: string,
     Poster: string
 }
 
@@ -36,5 +38,5 @@ export class Movie {
 
 export class Rating {
     Source: string;
-    Value: string
+    Value: string;
 }
