@@ -29,6 +29,12 @@ img {
     height: 250px;
     max-height: 250px;
 }
-div{
-    background-color: #000000;
+
+
+input[type="text"]{
+    width: 65vw;
+    height: 30px;
+    margin: 5px;
+    border: 3px solid #F5C52E;
+    border-radius: 6px;
 }

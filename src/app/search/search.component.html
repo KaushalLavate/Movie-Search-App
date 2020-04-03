@@ -8,6 +8,26 @@
 </mat-form-field>
 <!--[formControl]="searchControl"-->
 <mat-form-field appearance="outline">
-    <input type="text" placeholder="Enter the Name of the movie" autofocus>
+    <input type="text" [formControl]="searchControl" placeholder="Enter the Name of the movie" autofocus>
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
+  <div class="row">
+    <mat-card *ngFor="let movie of movies$ | async">
+
+        <mat-card-header>
+            <mat-card-title>
+                {{ movie?.Title.substring(0, 100) }}
+            </mat-card-title>
+            <mat-card-subtitle> {{movie?.Type}} {{movie?.Year}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <img mat-card-image
+            *ngIf="movie?.Poster !=='N/A'"
+            [src]="movie?.Poster" />
+
+        <mat-card-content>
+            imdbID {{movie?.imdbID}}
+        </mat-card-content>
+
+    </mat-card>
+</div>

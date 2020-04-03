@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Search } from "../models/movie";
 
 @Component({
   selector: 'app-header',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit() {

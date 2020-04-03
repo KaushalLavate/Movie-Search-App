@@ -7,6 +7,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule, } from "@angular/material/card";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { PageComponent } from './page/page.component';
 import { SearchComponent } from './search/search.component';
 import { MovieService } from "./services/movie.service";
 import { baseURL } from "./models/movie";
+import { HttpClientModule } from '@angular/common/http';
  
 
 
@@ -29,13 +31,16 @@ import { baseURL } from "./models/movie";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     MovieService,
