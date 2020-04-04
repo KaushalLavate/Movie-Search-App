@@ -8,6 +8,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule, } from "@angular/material/card";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +20,8 @@ import { SearchComponent } from './search/search.component';
 import { MovieService } from "./services/movie.service";
 import { baseURL } from "./models/movie";
 import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './modal/modal.component';
+import 'hammerjs';
  
 
 
@@ -26,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     PageComponent,
-    SearchComponent
+    SearchComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -40,12 +45,18 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatCardModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [
     MovieService,
     { provide: 'BaseURL', useValue:baseURL }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[
+    ModalComponent,
+    PageComponent
+  ]
 })
 export class AppModule { }
