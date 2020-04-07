@@ -38,11 +38,10 @@ img {
     max-height: 250px;
 }
 
-input[type="text"]{
+/*mat-form-field {
     width: 65vw;
     height: 30px;
-    margin: 5px;
     border: 3px solid #F5C52E;
     border-radius: 6px;
-}
+}*/
   

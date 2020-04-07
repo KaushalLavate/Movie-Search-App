@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { map, switchMap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
-
 import {Observable } from 'rxjs';
 import { MovieService } from '../services/movie.service.js';
 import { Search } from '../models/movie.js';
-
-
 
 @Component({
   selector: 'app-search',
@@ -30,7 +27,6 @@ export class SearchComponent implements OnInit {
         ),
         map((res:any) => res.Search)
       );
-  
   }
 
 }

@@ -1,43 +1,21 @@
 <p>modal works!</p>
-<!--><form #loginForm="ngForm" (ngSubmit)="onSubmit()">
-<h1 mat-dialog-title>Hi {{ ata.name }}</h1>
-<mat-dialog-content>
-  <h2>Review</h2>
-  
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content>
+  <p>Rate this Movie</p>
+    <mat-slider
+        class="example-margin"
+        max="5"
+        min="0"
+        thumbLabel="True"
+        [(ngModel)]="data.rating">
+    </mat-slider>
+    <p>Give Review</p>
   <mat-form-field>
-    <input matInput [(ngModel)]="ata.review" #review="ngModel" placeholder="Review">
+    <input matInput [(ngModel)]="data.review" placeholder="Review">
   </mat-form-field>
-
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close>No Thanks</button>
-  <button type="submit" mat-button [mat-dialog-close]="ata.review" cdkFocusInitial (click)="openSnackBar(ata.name, ata.review)">Ok</button>
-</mat-dialog-actions></form>
-
-<mat-toolbar class="background-primary">
-  Login
-  <span class="flex-spacer"></span>
-  <button mat-button mat-dialog-close>&times;</button>
-</mat-toolbar>-->
-
-<p>{{ user | json }}</p>
-
-<form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()">
-  <mat-dialog-content>
-      <p>
-          <mat-form-field>
-              <input matInput placeholder="Username" type="text" [(ngModel)]="user.username" name="username" #username="ngModel" required>
-              
-          </mat-form-field>
-          <mat-form-field>
-          <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required>
-          </mat-form-field>
-          
-      </p>
-  </mat-dialog-content>
-  <mat-dialog-actions>
-      <span class="flex-spacer"></span>
-      <button mat-button mat-dialog-cancel>Cancel</button>
-      <button mat-button type="submit" class="background-primary" [disabled]="loginForm.form.invalid">Login</button>
-  </mat-dialog-actions>
-</form>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

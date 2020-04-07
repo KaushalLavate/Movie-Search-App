@@ -5,7 +5,8 @@ export interface Search {
     Year: number,
     imdbID: string,
     Type: string,
-    Poster: string
+    Poster: string,
+    Ratings: Rating[]
 }
 
 export class Movie {
@@ -38,5 +39,5 @@ export class Movie {
 
 export class Rating {
     Source: string;
-    Value: string;
+    Value: number;
 }

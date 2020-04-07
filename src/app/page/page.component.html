@@ -1,6 +1,6 @@
 <p>page works!!!</p>
 
-<div class="row">
+<div class="row" *ngIf="s_movies!=='N/A'">
     <mat-card *ngFor="let movie of movies">
 
         <mat-card-header>
@@ -15,7 +15,7 @@
             [src]="movie?.Poster" />
 
         <mat-card-content>
-            <button mat-raised-button (click)="openDialog()">Review</button>
+            <button mat-raised-button (click)="openDialog(movie.Title)">Review</button>
         </mat-card-content>
 
     </mat-card>

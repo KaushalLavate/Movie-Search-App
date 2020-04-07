@@ -10,6 +10,7 @@ import { MatCardModule, } from "@angular/material/card";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSliderModule } from "@angular/material/slider";
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,16 +48,19 @@ import 'hammerjs';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSliderModule
+  ],
+  exports:[FormsModule,
+    MatDialogModule, 
+    MatFormFieldModule, 
+    MatButtonModule, 
+    MatInputModule
   ],
   providers: [
     MovieService,
     { provide: 'BaseURL', useValue:baseURL }
   ],
-  bootstrap: [AppComponent],
-  entryComponents:[
-    ModalComponent,
-    PageComponent
-  ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,14 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Search } from "../models/movie";
-
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { ModalComponent } from "../modal/modal.component";
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -17,24 +7,9 @@ export interface DialogData {
 })
 export class HeaderComponent implements OnInit {
 
-  animal: string;
-  name: string;
+  constructor() { }
 
   
-  constructor(public dialog: MatDialog) { }
-
-  openDialog(): void {
-    const dialogRef = this.dialog.open(ModalComponent, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
-  }
-
   ngOnInit() {
   }
 
