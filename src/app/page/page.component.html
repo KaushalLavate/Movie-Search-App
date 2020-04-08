@@ -15,7 +15,7 @@
             [src]="movie?.Poster" />
 
         <mat-card-content>
-            <button mat-raised-button (click)="openDialog(movie.Title)">Review</button>
+            <button mat-raised-button (click)="openDialog(movie.imdbID,movie.Title)">Review</button>
         </mat-card-content>
 
     </mat-card>
