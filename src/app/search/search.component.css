@@ -1,10 +1,18 @@
-
-mat-form-field {
-    width: 100% ;
-    margin-right: 0.5em;
+mat-form-field   {
+    width: 90vw!important ;
+    margin-top: 15px!important;
+    margin-left: 60px;
+    color: white;
+    margin-top: unset;
+    padding-bottom: -unset!important;
+}
+.mat-form-field-infix{
+    border-top-width: 0px!important;
+    padding-bottom: 10px!important;
 }
 mat-icon {
     margin-right: 0.6em;
+    color: aliceblue;
 }
 .row {
     display: flex;
@@ -38,10 +46,4 @@ img {
     max-height: 250px;
 }
 
-/*mat-form-field {
-    width: 65vw;
-    height: 30px;
-    border: 3px solid #F5C52E;
-    border-radius: 6px;
-}*/
   

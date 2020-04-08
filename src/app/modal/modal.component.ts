@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { DialogData } from '../page/page.component';
+import { Rating } from "../models/movie";
 
 @Component({
   selector: 'app-modal',
@@ -10,7 +10,7 @@ import { DialogData } from '../page/page.component';
 export class ModalComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef< ModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
+    @Inject(MAT_DIALOG_DATA) public data: Rating
      ) { }
      
       onNoClick(): void {

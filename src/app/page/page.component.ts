@@ -5,13 +5,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ModalComponent } from "../modal/modal.component";
 
-export interface DialogData {
-  id:string;
-  name: string;
-  rating: number;
-  review: string;
-}
-
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
@@ -20,26 +13,29 @@ export interface DialogData {
 export class PageComponent implements OnInit {
   movies: any = (data as any).movies;
   review : string;
-  
 
   constructor(private movieService : MovieService,
     public dialog: MatDialog,
     public _snackBar: MatSnackBar) { }
 
-    openDialog(id:string,name:string): void {
+    openDialog(imdbID:string,Title:string): void {
       const dialogRef = this.dialog.open(ModalComponent, {
-        width: '250px',
-        data: { id,name, rating:5,review:''}
+        width: '300px',
+        data: { imdbID,Title, rating:5,review:''}
       });
   
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
-        /*this.review = result;
-        console.log(this.review);*/
-        result!=undefined?this.openSnackBar(name,status='Submited'):this.openSnackBar(name,status='Not Submited')
-        sessionStorage.setItem("Review",JSON.stringify(result));
-        this.review = JSON.parse(sessionStorage.Review);
-        console.log(this.review);
+        
+        if(result!=undefined && result.review!=''){
+          this.openSnackBar(Title,status='Review Submited');
+          sessionStorage.setItem("Review",JSON.stringify(result));
+          this.review = JSON.parse(sessionStorage.Review);
+          console.log(this.review);
+        }
+        else{
+          this.openSnackBar(Title,status='Review Not Submited');
+        }
       });
     }
     openSnackBar(name: string, review: string) {
@@ -47,9 +43,7 @@ export class PageComponent implements OnInit {
         duration: 2000,
       });
     }
-  
     
-
  ngOnInit(){
   }
 }

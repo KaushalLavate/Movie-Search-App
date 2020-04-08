@@ -1,8 +1,5 @@
-<p>page works!!!</p>
-
 <div class="row" *ngIf="s_movies!=='N/A'">
     <mat-card *ngFor="let movie of movies">
-
         <mat-card-header>
             <mat-card-title>
                 {{ movie?.Title.substring(0, 100) }}

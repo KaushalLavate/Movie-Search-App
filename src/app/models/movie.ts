@@ -37,7 +37,9 @@ export class Movie {
     Response: boolean
 }
 
-export class Rating {
-    Source: string;
-    Value: number;
+export interface Rating {
+    imdbID: string;
+    Title: string;
+    Rating: number;
+    Review: string;
 }

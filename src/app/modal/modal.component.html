@@ -1,21 +1,21 @@
-<p>modal works!</p>
-<h1 mat-dialog-title>{{data.name}}</h1>
-<div mat-dialog-content>
-  <p>Rate this Movie</p>
-    <mat-slider
-        class="example-margin"
-        max="5"
-        min="0"
-        thumbLabel="True"
-        [(ngModel)]="data.rating">
-    </mat-slider>
-    <p>Give Review</p>
-  <mat-form-field>
-    <input matInput [(ngModel)]="data.review" placeholder="Review">
-  </mat-form-field>
-  
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
-</div>
+
+  <h1 mat-dialog-title>{{data.Title}}</h1>
+  <div mat-dialog-content>
+    <p>Rate this Movie</p>
+      <mat-slider
+          class="example-margin"
+          max="5"
+          min="0"
+          thumbLabel="True"
+          [(ngModel)]="data.rating">
+      </mat-slider>
+      <p>Give Review</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.review" placeholder="Review">
+    </mat-form-field>
+    
+  </div>
+  <div mat-dialog-actions class="center">
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+  </div>

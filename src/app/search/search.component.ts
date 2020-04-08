@@ -21,20 +21,23 @@ export class SearchComponent implements OnInit {
     public dialog: MatDialog,
     public _snackBar: MatSnackBar) { }
 
-    openDialog(id:string,name:string): void {
+    openDialog(imdbID:string,Title:string): void {
       const dialogRef = this.dialog.open(ModalComponent, {
         width: '250px',
-        data: { id,name, rating:5,review:''}
+        data: { imdbID,Title, rating:5,review:''}
       });
 
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
-        /*this.review = result;
-        console.log(this.review);*/
-        result!=undefined?this.openSnackBar(name,status='Submited'):this.openSnackBar(name,status='Not Submited')
-        sessionStorage.setItem("Review",JSON.stringify(result));
-        this.review = JSON.parse(sessionStorage.Review);
-        console.log(this.review);
+        if(result!=undefined && result.review!=''){
+          this.openSnackBar(Title,status='Review Submited');
+          sessionStorage.setItem("Review",JSON.stringify(result));
+          this.review = JSON.parse(sessionStorage.Review);
+          console.log(this.review);
+        }
+        else{
+          this.openSnackBar(Title,status='Review Not Submited');
+        }
       });
     }
     openSnackBar(name: string, review: string) {
