@@ -23,6 +23,7 @@ import { baseURL } from "./models/movie";
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './modal/modal.component';
 import 'hammerjs';
+import { WatchlistComponent } from './watchlist/watchlist.component';
  
 
 
@@ -32,7 +33,8 @@ import 'hammerjs';
     HeaderComponent,
     PageComponent,
     SearchComponent,
-    ModalComponent
+    ModalComponent,
+    WatchlistComponent
   ],
   imports: [
     BrowserModule,

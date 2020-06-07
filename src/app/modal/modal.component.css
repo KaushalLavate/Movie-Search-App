@@ -1,6 +1,13 @@
 .mat-slider-horizontal {
-    width: 80%;
+    width: 90%;
+  }
+
+  h1{
+    text-align: center;
   }
   .center{
-    text-align: center;
+    padding: 0px 30px 10px;
+  }
+  .Padding{
+    padding: 0px 50px;
   }

@@ -2,13 +2,13 @@
     <input matInput
         class="w-75"
         name="movie_search"
-        [formControl]="searchControl" 
+        [formControl]="searchControl"
         placeholder="Enter the Name of the movie" 
         autofocus>
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
  <div class="row">
-    <mat-card *ngFor="let movie of movies$ | async">
+    <mat-card *ngFor="let movie of movies">
 
         <mat-card-header>
             <mat-card-title>

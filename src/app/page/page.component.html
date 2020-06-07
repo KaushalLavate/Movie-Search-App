@@ -3,6 +3,9 @@
         <mat-card-header>
             <mat-card-title>
                 {{ movie?.Title.substring(0, 100) }}
+                <button mat-mini-fab class="icon" [color]="iconColor" (click)="click()" >
+                    <mat-icon>bookmark</mat-icon>
+                </button>
             </mat-card-title>
             <mat-card-subtitle> {{movie?.Type}} {{movie?.Year}}</mat-card-subtitle>
         </mat-card-header>
@@ -12,7 +15,8 @@
             [src]="movie?.Poster" />
 
         <mat-card-content>
-            <button mat-raised-button (click)="openDialog(movie.imdbID,movie.Title)">Review</button>
+            <button mat-raised-button (click)="openDialog(movie.imdbID,movie.Title)" color="accent">Review</button>
+            
         </mat-card-content>
 
     </mat-card>
