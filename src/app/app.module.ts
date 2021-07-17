@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import 'hammerjs';
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
@@ -7,34 +11,29 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule, } from "@angular/material/card";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSliderModule } from "@angular/material/slider";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatChipsModule } from "@angular/material/chips";
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PageComponent } from './page/page.component';
-import { SearchComponent } from './search/search.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PageComponent } from './components/page/page.component';
 import { MovieService } from "./services/movie.service";
-import { baseURL } from "./models/movie";
-import { HttpClientModule } from '@angular/common/http';
-import { ModalComponent } from './modal/modal.component';
-import 'hammerjs';
-import { WatchlistComponent } from './watchlist/watchlist.component';
- 
-
+import { ModalComponent } from './components/modal/modal.component';
+import { WatchlistComponent } from './components/watchlist/watchlist.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PageComponent,
-    SearchComponent,
     ModalComponent,
-    WatchlistComponent
+    WatchlistComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +50,9 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
     ReactiveFormsModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatSliderModule
+    MatSliderModule,
+    MatGridListModule,
+    MatChipsModule
   ],
   exports:[FormsModule,
     MatDialogModule, 
@@ -60,8 +61,7 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
     MatInputModule
   ],
   providers: [
-    MovieService,
-    { provide: 'BaseURL', useValue:baseURL }
+    MovieService
   ],
   bootstrap: [AppComponent]
 })

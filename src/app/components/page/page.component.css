@@ -6,12 +6,33 @@
     justify-content: space-evenly;
     margin-top: 5px;
 }
-
+.title h1{
+    color: black;
+    background-color: goldenrod;
+    margin: 21.44px 0px 0;
+    padding: 10px 30px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+}
 mat-card {
     width: 300px;
     margin: 30px;
     text-align: center;
     cursor: pointer;
+    transition: 0.5s;
+    background: #1F1F1F;
+}
+
+mat-card:hover{
+    width: 320px;
+    margin:20px;
+    /*box-shadow: 0px 0px 10px 4px #ffc107;*/
+    box-shadow: 0px 0px 10px 4px #5799EF;
+}
+
+.title{
+    font-weight: bold;
+    color:#ffc107;
 }
 
 mat-card-header {
@@ -21,6 +42,10 @@ mat-card-header {
 
 mat-card-header:hover {
     box-shadow: 3px 3px 16px -2px #DD2C00;
+}
+
+mat-card-subtitle{
+    color:#ffe57f;
 }
 
 img {
@@ -39,4 +64,5 @@ input[type="text"]{
 .icon{
     position: absolute;
     right: 10px;
+    transform: translateY(-50%);
 }

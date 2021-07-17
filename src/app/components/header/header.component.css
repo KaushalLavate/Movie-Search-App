@@ -1,0 +1,39 @@
+@mixing zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0px;
+    padding: $pad-up-down $pad-left-right;
+}
+
+.logo {
+    width: 70px;
+    border-radius: 3px;
+}
+
+.flex-spacer {
+    flex: 1 1 auto;
+}
+a{
+    margin-left: 25px;
+}
+.search {
+    width: 80%!important;
+    margin-top: 15px;
+    font-size: 12px;
+    margin-left: 60px;
+    color: white;
+}
+.mat-form-field-infix{
+    border-top-width: 0px!important;
+    padding-bottom: 10px!important;
+}
+mat-icon {
+    margin-right: 0.6em;
+    color: aliceblue;
+}
+button{
+    padding-bottom: 10px;
+}
+a{
+    font-size: 16px;
+}
+
+

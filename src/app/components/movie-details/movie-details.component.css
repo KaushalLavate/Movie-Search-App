@@ -1,0 +1,62 @@
+.container{
+    padding: 24px 50px;
+}
+
+.title-bar{
+    width: 100%;
+    height: 102px;
+}
+
+:host ::ng-deep .mat-grid-tile .mat-figure{
+    display: unset!Important;
+    height: fit-content;
+}
+
+.right-part{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.title{
+    font-size: 48px;
+    color: white;
+}
+
+.sub-title{
+    color: #7d7e7f;
+}
+
+.white-font{
+    transform: translateY(5px)!important;
+    color: white;
+    font-size: 20px;
+}
+
+.title-bar .right-part{
+    margin-top: 30px!important;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.title-bar .right-part .body .icon{
+    color: goldenrod!important;
+}
+
+.vertical-padding{
+    padding-top: 30px;
+}
+
+.main-body{
+    padding: auto 24px;
+    color: white;
+}
+hr{
+    border: 1px solid #7d7e7f;
+    margin: 20px 0;
+}
+.blue-font{
+    color: #5799EF;
+}
+.rating-block{
+    cursor: pointer;
+}

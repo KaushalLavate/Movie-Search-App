@@ -3,11 +3,16 @@
   }
 
   h1{
+    font-weight: bold;
     text-align: center;
+    color:#ffc107;
   }
   .center{
-    padding: 0px 30px 10px;
+    padding: 0px 70px 10px;
   }
   .Padding{
     padding: 0px 50px;
+  }
+  .example-full-width {
+    width: 90%;
   }

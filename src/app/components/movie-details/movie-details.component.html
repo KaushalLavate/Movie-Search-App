@@ -1,0 +1,49 @@
+<div *ngIf="movie" class="container">
+    <mat-grid-list cols="4" rowHeight="102px" class="title-bar">
+        <mat-grid-tile colspan="3" class="left-part">
+            <div class="title">
+                {{movie.Title}}
+            </div>
+            <div class="sub-title">
+                {{movie.Year}}&nbsp;-&nbsp;{{movie.Rated}}&nbsp;-&nbsp;{{movie.Runtime}}
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile class="right-part">
+            <mat-grid-list cols="2" rowHeight="102px" class="rating">
+                <mat-grid-tile class="rated-block">
+                    <div class="heading">
+                        IMDb RATING
+                    </div>
+                    <div class="body">
+                        <span class="fa fa-star fa-lg icon"></span>&nbsp; <span class="white-font">{{movie.imdbRating}}</span>/10
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile class="rating-block" (click)="openDialog(movie.imdbID,movie.Title)">
+                    <div class="heading">
+                        YOUR RATING
+                    </div>
+                    <div class="body">
+                        <span class="fa fa-star-o fa-lg"></span>&nbsp;<span class="white-font">Rate</span>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="4" rowHeight="420px">
+        <mat-grid-tile>
+            <img  mat-card-image [src]="movie?.Poster" height="420" width="284"/>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="3" class="main-body">
+            <mat-chip-list class="vertical-padding">
+                <mat-chip *ngFor="let genre of movie.Genre">{{genre}}</mat-chip>
+            </mat-chip-list>
+            <div class="vertical-padding">{{movie.Plot}}</div>
+            <hr>
+            <span>Director</span>&nbsp;&nbsp;<span class="blue-font">{{movie.Director}}</span>
+            <hr>
+            <span>Writers</span><br><span class="blue-font">{{movie.Writer}}</span>
+            <hr>
+            <span>Casts</span><br><span class="blue-font">{{movie.Actors}}</span>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

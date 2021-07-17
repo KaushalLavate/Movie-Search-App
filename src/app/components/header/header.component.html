@@ -1,0 +1,16 @@
+<mat-toolbar color="black">
+    <a  mat-raised-button color="primary" [routerLink]="['/home']"><span class="fa fa-home fa-lg">&nbsp;&nbsp;Home</span></a>
+    <mat-form-field appearance="outline" class="search">
+        <input matInput
+            name="movie_search"
+            [formControl]="searchControl"
+            placeholder="Enter the Name of the movie" 
+            autofocus>
+        <button matSuffix mat-button color="primary"  (click)="search()"><span class="fa fa-search fa-lg"></span></button>
+      </mat-form-field>
+    <span class="flex-spacer"></span>
+    
+    
+    <!--<a mat-button ><span class="fa fa-bookmark fa-lg"></span> Watchlist</a>-->
+    <a  mat-button [routerLink]="['/Watchlist']">WatchList&nbsp;&nbsp;<span class="fa fa-bookmark-o fa-lg"></span></a>
+</mat-toolbar>

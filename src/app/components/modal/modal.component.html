@@ -5,16 +5,17 @@
           class="example-margin"
           max="5"
           min="0"
+          color="primary"
           thumbLabel="True"
           [(ngModel)]="data.rating">
       </mat-slider>
-      <p>Give Review</p>
-    <mat-form-field>
-      <input matInput [(ngModel)]="data.review" placeholder="Review">
+      <p>Review</p>
+    <mat-form-field class="example-full-width">
+      <textarea matInput [(ngModel)]="data.review" rows="5"></textarea>
     </mat-form-field>
     
   </div>
   <div mat-dialog-actions class="center">
     <button mat-button (click)="onNoClick()">No Thanks</button>
-    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>Submit</button>
   </div>

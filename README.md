@@ -1,27 +1,28 @@
-# Imdb
+# Movie Cruiser App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+In this Website user can search movies, add them to watchlist and submit a review.
+This project was developed using **Angular v8**, **Angular material** for UI and **OMDb API** to Fetch the movie details.
 
-## Development server
+## How to Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1) Clone the repository on your system.
+2) Run `npm install` inside the repository to install the required libraries.
+3) Run `ng serve` to start a dev server.
+4) Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
+## Screenshots
+ - Home Page
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Home Page](Screenshots/Home%20Page.png)
 
-## Build
+- Search Results
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![Search Results](Screenshots/Search%20Results.png)
 
-## Running unit tests
+- Watchlist
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Watchlist](Screenshots/Watchlist.png)
 
-## Running end-to-end tests
+- Movie Details Page
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![Movie Details](Screenshots/Movie%20Details.png)
